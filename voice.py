@@ -153,7 +153,7 @@ def generate_text(prompt):
     if response_message.content and response_message.content!='':
         result = response_message.content
         last_tts_request = buildSpeech(result)
-        
+        messages.append({"role": "assistant", "content": result})
 
     
     if last_tts_request:
